@@ -1,6 +1,5 @@
-class AllFruits extends React.Component {
-  render(){
-  	var fruits = this.state.fruits.map((fruit) => {
+const AllFruits = (props) => {
+  	var fruits = props.fruits.map((fruit) => {
   		return(
   		<div key={fruit.id}>
   		<h1>{fruit.name}</h1>
@@ -8,13 +7,10 @@ class AllFruits extends React.Component {
   		</div>
   		)
   	})
-  }
 
-	render(){
-		return(
+return(
 			<div>
-				<h1>To do: List of fruits</h1>
+				{fruits}
 			</div>
 			)
-	}
 }
